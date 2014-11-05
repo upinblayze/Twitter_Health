@@ -11,7 +11,13 @@
  * limitations under the License.
  **/
 
-package com.twitter.hbc.example;
+package health;
+
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.TimeUnit;
 
 import com.twitter.hbc.ClientBuilder;
 import com.twitter.hbc.core.Constants;
@@ -21,16 +27,11 @@ import com.twitter.hbc.httpclient.BasicClient;
 import com.twitter.hbc.httpclient.auth.Authentication;
 import com.twitter.hbc.httpclient.auth.OAuth1;
 
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.TimeUnit;
-
 public class SampleStreamExample {
 
   public static void run(String consumerKey, String consumerSecret, String token, String secret) throws InterruptedException {
     // Create an appropriately sized blocking queue
     BlockingQueue<String> queue = new LinkedBlockingQueue<String>(10000);
-
     // Define our endpoint: By default, delimited=length is set (we need this for our processor)
     // and stall warnings are on.
     StatusesSampleEndpoint endpoint = new StatusesSampleEndpoint();
@@ -50,7 +51,8 @@ public class SampleStreamExample {
 
     // Establish a connection
     client.connect();
-
+    try{
+    PrintWriter pw=new PrintWriter("Tweets.txt");
     // Do whatever needs to be done with messages
     for (int msgRead = 0; msgRead < 1000; msgRead++) {
       if (client.isDone()) {
@@ -62,10 +64,13 @@ public class SampleStreamExample {
       if (msg == null) {
         System.out.println("Did not receive a message in 5 seconds");
       } else {
-        System.out.println(msg);
+    	System.out.println(msg);
+        pw.println(msg);
       }
     }
-
+    }catch(FileNotFoundException fnfe){
+    	System.err.println(fnfe.getMessage());
+    }
     client.stop();
 
     // Print some stats
