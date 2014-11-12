@@ -2,12 +2,12 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
-	<classpathentry kind="lib" path="/Users/kellencheng/Downloads/TCSS 543/commons-logging-1.2.jar"/>
-	<classpathentry kind="lib" path="/Users/kellencheng/Downloads/TCSS 543/guava-18.0.jar"/>
-	<classpathentry kind="lib" path="/Users/kellencheng/Downloads/TCSS 543/hbc-core-2.2.0.jar"/>
-	<classpathentry kind="lib" path="/Users/kellencheng/Downloads/TCSS 543/joauth-6.0.1.jar"/>
-	<classpathentry kind="lib" path="/Users/kellencheng/Downloads/TCSS 543/org.apache.httpcomponents.httpclient_4.3.5.jar"/>
-	<classpathentry kind="lib" path="/Users/kellencheng/Downloads/TCSS 543/scala-library-2.9.0.jar"/>
-	<classpathentry kind="lib" path="/Users/kellencheng/Downloads/TCSS 543/slf4j-api-1.7.7.jar"/>
+	<classpathentry kind="lib" path="/Users/kellencheng/Documents/workspace/TCSS 543/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="/Users/kellencheng/Documents/workspace/TCSS 543/guava-18.0.jar"/>
+	<classpathentry kind="lib" path="/Users/kellencheng/Documents/workspace/TCSS 543/hbc-core-2.2.0.jar"/>
+	<classpathentry kind="lib" path="/Users/kellencheng/Documents/workspace/TCSS 543/joauth-6.0.1.jar"/>
+	<classpathentry kind="lib" path="/Users/kellencheng/Documents/workspace/TCSS 543/org.apache.httpcomponents.httpclient_4.3.5.jar"/>
+	<classpathentry kind="lib" path="/Users/kellencheng/Documents/workspace/TCSS 543/org.json-20120521.jar"/>
+	<classpathentry kind="lib" path="/Users/kellencheng/Documents/workspace/TCSS 543/slf4j-api-1.7.7.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
