@@ -12,9 +12,10 @@ import java.util.concurrent.TimeUnit;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.google.common.collect.Lists;
 import com.twitter.hbc.ClientBuilder;
 import com.twitter.hbc.core.Constants;
-import com.twitter.hbc.core.endpoint.StatusesSampleEndpoint;
+import com.twitter.hbc.core.endpoint.StatusesFilterEndpoint;
 import com.twitter.hbc.core.processor.StringDelimitedProcessor;
 import com.twitter.hbc.httpclient.BasicClient;
 import com.twitter.hbc.httpclient.auth.Authentication;
@@ -31,8 +32,9 @@ public class TweetRetrieval {
 		BlockingQueue<String> queue = new LinkedBlockingQueue<String>(10000);
 		// Define our endpoint: By default, delimited=length is set (we need this for our processor)
 		// and stall warnings are on.
-		StatusesSampleEndpoint endpoint = new StatusesSampleEndpoint();
+		StatusesFilterEndpoint endpoint = new StatusesFilterEndpoint();
 		endpoint.stallWarnings(false);
+		endpoint.trackTerms(Lists.newArrayList("Flu","Ebola"));
 
 		Authentication auth = new OAuth1(consumerKey, consumerSecret, token, secret);
 
@@ -51,6 +53,7 @@ public class TweetRetrieval {
 			PrintWriter outFile=new PrintWriter("Retrieved Tweets.txt");
 			PrintWriter raw=new PrintWriter("raw.txt");
 			int count=0;
+			long begin=System.nanoTime();
 			while(count<20) {
 				if (client.isDone()) {
 					System.out.println("Client connection closed unexpectedly: " + client.getExitEvent().getMessage());
@@ -80,7 +83,8 @@ public class TweetRetrieval {
 					System.out.println("Did not receive a message in 1 seconds");
 				}
 			}
-
+			long end=System.nanoTime();
+			System.out.println((end-begin)+"ns");
 			outFile.close();
 			raw.close();
 		}catch(FileNotFoundException fnfe){
