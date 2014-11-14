@@ -3,8 +3,12 @@
  */
 package health;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.TreeSet;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
@@ -34,7 +38,21 @@ public class TweetRetrieval {
 		// and stall warnings are on.
 		StatusesFilterEndpoint endpoint = new StatusesFilterEndpoint();
 		endpoint.stallWarnings(false);
-		endpoint.trackTerms(Lists.newArrayList("Flu","Ebola"));
+		try{
+			Scanner scan=new Scanner(new File("nutrition.txt"));
+			TreeSet<String> TS=new TreeSet<String>();
+			while(scan.hasNextLine()){
+				TS.add(scan.nextLine());
+			}
+			ArrayList<String> terms=new ArrayList<String>();
+			for(String s:TS){
+				terms.add(s);
+			}
+			endpoint.trackTerms(terms);
+		}catch(FileNotFoundException f){
+			System.err.println(f.getMessage());
+			System.exit(0);
+		}
 
 		Authentication auth = new OAuth1(consumerKey, consumerSecret, token, secret);
 
@@ -54,7 +72,7 @@ public class TweetRetrieval {
 			PrintWriter raw=new PrintWriter("raw.txt");
 			int count=0;
 			long begin=System.nanoTime();
-			while(count<20) {
+			while(count<500) {
 				if (client.isDone()) {
 					System.out.println("Client connection closed unexpectedly: " + client.getExitEvent().getMessage());
 					break;
@@ -84,7 +102,8 @@ public class TweetRetrieval {
 				}
 			}
 			long end=System.nanoTime();
-			System.out.println((end-begin)+"ns");
+			long div=1000000000;
+			System.out.println(((end-begin)/div)+"s");
 			outFile.close();
 			raw.close();
 		}catch(FileNotFoundException fnfe){
