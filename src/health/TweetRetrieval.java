@@ -93,11 +93,12 @@ public class TweetRetrieval {
 							String name=tweeter.get("screen_name").toString();
 							String text=tweet.get("text").toString();
 							String format="["+name+"] "+text;
-							String geo= tweet.get("coordinates").toString();
-							if(!geo.equals("null")){
-								JSONObject location=new JSONObject(geo);
-								
-								format=location.get("coordinates").toString()+" "+format;
+							if(!tweet.isNull("coordinates")){
+//							String geo= tweet.get("coordinates").toString();
+//							if(!geo.equals("null")){
+								JSONObject geo= (JSONObject)tweet.get("coordinates");
+								System.out.println(name+": "+geo.get("coordinates").toString());
+								format=geo.get("coordinates").toString()+" "+format;
 							}
 							outFile.println(format);
 							raw.println(msg);
