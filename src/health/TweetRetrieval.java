@@ -94,8 +94,7 @@ public class TweetRetrieval {
 							String text=tweet.get("text").toString();
 							String format="["+name+"] "+text;
 							if(!tweet.isNull("coordinates")){
-//							String geo= tweet.get("coordinates").toString();
-//							if(!geo.equals("null")){
+
 								JSONObject geo= (JSONObject)tweet.get("coordinates");
 								System.out.println(name+": "+geo.get("coordinates").toString());
 								format=geo.get("coordinates").toString()+" "+format;
