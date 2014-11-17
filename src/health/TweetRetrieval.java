@@ -16,7 +16,6 @@ import java.util.concurrent.TimeUnit;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.google.common.collect.Lists;
 import com.twitter.hbc.ClientBuilder;
 import com.twitter.hbc.core.Constants;
 import com.twitter.hbc.core.endpoint.StatusesFilterEndpoint;
@@ -26,8 +25,9 @@ import com.twitter.hbc.httpclient.auth.Authentication;
 import com.twitter.hbc.httpclient.auth.OAuth1;
 
 /**
- * @author kellencheng
- *
+ * @author Kellen Cheng
+ * @author Kai Yuan Shi
+ * @author Nai Wei Chen
  */
 public class TweetRetrieval {
 
@@ -72,6 +72,7 @@ public class TweetRetrieval {
 			PrintWriter outFile=new PrintWriter("Retrieved Tweets.txt");
 			PrintWriter raw=new PrintWriter("raw.txt");
 			int count=0;
+//			use a time to takes the time it takes to retrieve a certain number of tweets
 			long begin=System.nanoTime();
 			while(count<500) {
 				if (client.isDone()) {
@@ -92,6 +93,12 @@ public class TweetRetrieval {
 							String name=tweeter.get("screen_name").toString();
 							String text=tweet.get("text").toString();
 							String format="["+name+"] "+text;
+							String geo= tweet.get("coordinates").toString();
+							if(!geo.equals("null")){
+								JSONObject location=new JSONObject(geo);
+								
+								format=location.get("coordinates").toString()+" "+format;
+							}
 							outFile.println(format);
 							raw.println(msg);
 						}
