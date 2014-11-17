@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Scanner;
 import java.util.TreeSet;
 import java.util.concurrent.BlockingQueue;
@@ -71,10 +72,10 @@ public class TweetRetrieval {
 		try{
 			PrintWriter outFile=new PrintWriter("Retrieved Tweets.txt");
 			PrintWriter raw=new PrintWriter("raw.txt");
-			int count=0;
-//			use a time to takes the time it takes to retrieve a certain number of tweets
+			//			use a time to takes the time it takes to retrieve a certain number of tweets
 			long begin=System.nanoTime();
-			while(count<500) {
+			HashSet<String> unique=new HashSet<String>();
+			while(unique.size()<500) {
 				if (client.isDone()) {
 					System.out.println("Client connection closed unexpectedly: " + client.getExitEvent().getMessage());
 					break;
@@ -89,9 +90,10 @@ public class TweetRetrieval {
 						JSONObject tweeter=(JSONObject)tweet.get("user");
 						String language=tweet.get("lang").toString();
 						if(language.equals("en")){
-							count++;
 							String name=tweeter.get("screen_name").toString();
 							String text=tweet.get("text").toString();
+
+							unique.add(text);
 							String format="["+name+"] "+text;
 							if(!tweet.isNull("coordinates")){
 
@@ -108,6 +110,13 @@ public class TweetRetrieval {
 
 					System.out.println("Did not receive a message in 1 seconds");
 				}
+			}
+			outFile.println("\n====================\n");
+
+			int count=1;
+			for(String tweet:unique){
+				outFile.println(count+"-->"+tweet);
+				count++;
 			}
 			long end=System.nanoTime();
 			long div=1000000000;
