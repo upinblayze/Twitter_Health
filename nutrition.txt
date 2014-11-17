@@ -233,6 +233,7 @@ Deficiency disease
 Deep frying
 Detoxification
 Diabetes
+diabetic
 Diet
 Dietary fiber
 Dietary mineral
@@ -253,14 +254,12 @@ Empty calorie
 Energy drink
 Enzymes
 Ergogenic aids
-Essential
 Essential amino acid
 Essential fatty acid
 Essential mineral
 Essential nutrient
-Non-essential
 Vitamin
-EFA (essential fatty acid)
+EFA
 Essential fatty acids
 Fat soluble vitamins
 Fad diet
