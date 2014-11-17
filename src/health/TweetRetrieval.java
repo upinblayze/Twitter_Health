@@ -48,6 +48,7 @@ public class TweetRetrieval {
 			for(String s:TS){
 				terms.add(s);
 			}
+			scan.close();
 			endpoint.trackTerms(terms);
 		}catch(FileNotFoundException f){
 			System.err.println(f.getMessage());
