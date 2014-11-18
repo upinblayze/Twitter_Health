@@ -92,8 +92,24 @@ public class TweetRetrieval {
 						if(language.equals("en")){
 							String name=tweeter.get("screen_name").toString();
 							String text=tweet.get("text").toString();
+							Scanner remove=new Scanner(text);
+							String minimize="";
+							while(remove.hasNext()){
+								String word=remove.next();
+								boolean toNotAdd=false;
+								if(word.length()>7){
+									if(word.substring(0, 7).equalsIgnoreCase("http://")||word.substring(0, 8).equalsIgnoreCase("https://")){
+										toNotAdd=true;
+									}
+								}
+								if(word.indexOf('@')<0 && !toNotAdd){
+									word=word.replaceAll("\\W", "");
+									minimize+=" "+word;
 
-							unique.add(text);
+								}
+							}
+							remove.close();
+							unique.add(minimize.trim());
 							String format="["+name+"] "+text;
 							if(!tweet.isNull("coordinates")){
 
@@ -115,7 +131,7 @@ public class TweetRetrieval {
 
 			int count=1;
 			for(String tweet:unique){
-				outFile.println(count+"-->"+tweet);
+				outFile.println("["+count+"]"+tweet);
 				count++;
 			}
 			long end=System.nanoTime();
