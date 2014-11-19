@@ -97,10 +97,8 @@ public class TweetRetrieval {
 							while(remove.hasNext()){
 								String word=remove.next();
 								boolean toNotAdd=false;
-								if(word.length()>7){
-									if(word.substring(0, 7).equalsIgnoreCase("http://")||word.substring(0, 8).equalsIgnoreCase("https://")){
-										toNotAdd=true;
-									}
+								if(word.indexOf("http://")>=0||word.indexOf("https://")>=0){
+									toNotAdd=true;
 								}
 								if(word.indexOf('@')<0 && !toNotAdd){
 									word=word.replaceAll("\\W", "");
