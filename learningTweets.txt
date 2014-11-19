@@ -1,0 +1,10 @@
+[I][user1] illness   illness illness
+[E][user2] Exercise Exercise
+[N][user3] Nutrition Nutrition Nutrition
+[G][user4] General General General
+[X][user5] nonRelevant nonRelevant 
+[I,E][user6] illness illness Exercise Exercise Exercise
+[N,I][user7] Nutrition illness
+[E,N][user8] Nutrition Nutrition Nutrition Nutrition Exercise 
+[G][user9] General
+[X][user0] nonRelevant 
