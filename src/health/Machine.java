@@ -29,13 +29,37 @@ public class Machine {
 	
 	private static Classifier<String, String> myBayes = new BayesClassifier<String, String>();
 	
-	
+	private static int myTcounter = 0;
+	private static int myI = 0;
+	private static int myE = 0;
+	private static int myN = 0;
+	private static int myG = 0;
+	private static int myX = 0;
 
 	public void learn() {
 		myBayes.setMemoryCapacity(1000);
 		readInput();
 		learning();
 
+	}
+	
+	public void report() {
+		System.out.println("================================\n"
+				+ "Learning Report:");
+		System.out.println("Total tweets learned:             "
+				+ myTcounter);
+		System.out.println("Illness tweets learnded:          "
+				+ myI);
+		System.out.println("Exercise tweets learnded:         "
+				+ myE);
+		System.out.println("Nutrition tweets learnded:        "
+				+ myN);
+		System.out.println("General health tweets learnded:   "
+				+ myG);
+		System.out.println("Non Related tweets learnded:      "
+				+ myX);
+		System.out.println("\nEnd of Learning report\n"
+				+ "================================\n");
 	}
 	
 	public String getTopic(String tweet) {
@@ -61,14 +85,19 @@ public class Machine {
             	for (String eachTopic: topic) {
             		if (eachTopic.equals("I")) {
             			myIllnessWords.addAll(modifyWord(tweet));
+            			myI++;
             		} else if (eachTopic.equals("E")) {
             			myExerciseWords.addAll(modifyWord(tweet));
+            			myE++;
             		} else if (eachTopic.equals("N")) {
             			myNutritionWords.addAll(modifyWord(tweet));
-             		}  else if (eachTopic.equals("G")) {
+            			myN++;
+            		}  else if (eachTopic.equals("G")) {
              			myGeneralWords.addAll(modifyWord(tweet));
+             			myG++;
             		} else if (eachTopic.equals("X")) {
             			myNonRelevantWords.addAll(modifyWord(tweet));
+            			myX++;
             		} else {
             			System.out.println("warning! wrong topic label: "
             					+ eachTopic);
