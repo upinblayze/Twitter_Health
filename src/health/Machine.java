@@ -44,7 +44,7 @@ public class Machine {
 	}
 	
 	public void report() {
-		System.out.println("================================\n"
+		System.out.println("===================================\n"
 				+ "Learning Report:");
 		System.out.println("Total tweets learned:             "
 				+ myTcounter);
@@ -59,7 +59,7 @@ public class Machine {
 		System.out.println("Non Related tweets learnded:      "
 				+ myX);
 		System.out.println("\nEnd of Learning report\n"
-				+ "================================\n");
+				+ "===================================\n");
 	}
 	
 	public String getTopic(String tweet) {
