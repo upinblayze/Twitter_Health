@@ -141,11 +141,11 @@ public class Machine {
 	}
 	
 	private void learning() {
-		myBayes.learn("Illness", myIllnessWords);
-		myBayes.learn("Exercise", myExerciseWords);
-		myBayes.learn("Nutrition", myNutritionWords);
-		myBayes.learn("General", myGeneralWords);
-		myBayes.learn("Non Relevant", myNonRelevantWords);
+		myBayes.learn("I", myIllnessWords);
+		myBayes.learn("E", myExerciseWords);
+		myBayes.learn("N", myNutritionWords);
+		myBayes.learn("G", myGeneralWords);
+		myBayes.learn("X", myNonRelevantWords);
 	}
 
 }

@@ -3,12 +3,16 @@ package health;
 public class MachineMain {
 
 	public static void main(String[] args) {
-		Machine machine = new Machine();
+		/*Machine machine = new Machine();
 		machine.learn();
-		machine.report();
+		machine.report();*/
 		
-		String topic = machine.getTopic("exercise");
-		System.out.println(topic);
+		/*String topic = machine.getTopic("exercise");
+		System.out.println(topic);*/
+		
+		TestLearner testlearner = new TestLearner();
+		testlearner.testTweets();
+		testlearner.report();
 	}
 
 }
