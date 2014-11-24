@@ -167,11 +167,12 @@ public class TestLearner {
 	}
 	
 	public void report() {
-		System.out.println(myITP + "," + myIFP + "," + myIFN + "\n"
-				 + myETP + "," + myEFP + "," + myEFN + "\n"
-				 + myNTP + "," + myNFP + "," + myNFN + "\n"
-				 + myGTP + "," + myGFP + "," + myGFN + "\n"
-				 + myXTP + "," + myXFP + "," + myXFN + "\n");
+		System.out.println("          true P      false P       false N\n"
+				 + "Illness:      " + myITP + "          " + myIFP + "          " + myIFN + "\n"
+				 + "Exercise:     " + myETP + "          " + myEFP + "          " + myEFN + "\n"
+				 + "Nutrition:    " + myNTP + "          " + myNFP + "          " + myNFN + "\n"
+				 + "General:      " + myGTP + "          " + myGFP + "          " + myGFN + "\n"
+				 + "Not relevant: " + myXTP + "          " + myXFP + "          " + myXFN + "\n");
 
 		System.out.println("========================================\n"
 				+ "Test Report:");

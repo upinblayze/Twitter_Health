@@ -81,7 +81,6 @@ public class Machine {
             	if (line.length() == 0)
             		continue;
             	
-            	System.out.println(line);
             	
             	String[] temp = line.split("]");
             	String[] topic = temp[0].substring(1, temp[0].length()).split(",");
