@@ -17,7 +17,7 @@ import de.daslaboratorium.machinelearning.classifier.Classifier;
 public class Machine {
 	
 	private final String MY_STOPWORDS = "stopWords.txt";
-	private final String MY_LEARNING_TWEETS = "learningTweets.txt";
+	private final String MY_LEARNING_TWEETS = "learningData.txt";
 	
 	private List<String> myStopwords = new ArrayList<String>();
 	
@@ -78,9 +78,20 @@ public class Machine {
             scanner = new Scanner(new FileInputStream(MY_LEARNING_TWEETS));
             while (scanner.hasNextLine()) {
             	line = scanner.nextLine();
-            	String[] temp = line.split("]\\[");
+            	if (line.length() == 0)
+            		continue;
+            	
+            	System.out.println(line);
+            	
+            	String[] temp = line.split("]");
             	String[] topic = temp[0].substring(1, temp[0].length()).split(",");
-            	String tweet = temp[1].substring(temp[1].indexOf("]") + 1);
+            	String tweet = null;
+            	int index = temp[1].indexOf("]");
+            	if (index == -1) {
+            		tweet = temp[1];
+            	} else {
+            		tweet = temp[1].substring(temp[1].indexOf("]") + 1);
+            	}
             	
             	for (String eachTopic: topic) {
             		if (eachTopic.equals("I")) {

@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class TestLearner {
 	
-	private final String MY_TEST_TS = "learningTweets.txt";
+	private final String MY_TEST_TS = "testData.txt";
 	
 	Machine machine;
 	private int myTcounter = 0;
@@ -56,10 +56,19 @@ public class TestLearner {
             scanner = new Scanner(new FileInputStream(MY_TEST_TS));
             while (scanner.hasNextLine()) {
             	line = scanner.nextLine();
+            	if (line.length() == 0)
+            		continue;
+            	
             	myTcounter++;
-            	String[] temp = line.split("]\\[");
+            	String[] temp = line.split("]");
             	String[] topics = temp[0].substring(1, temp[0].length()).split(",");
-            	String tweet = temp[1].substring(temp[1].indexOf("]") + 1);
+            	String tweet = null;
+            	int index = temp[1].indexOf("]");
+            	if (index == -1) {
+            		tweet = temp[1];
+            	} else {
+            		tweet = temp[1].substring(temp[1].indexOf("]") + 1);
+            	}
             	
             	myTopiclist = new ArrayList<String>();
             	for (String eachTopic: topics)
