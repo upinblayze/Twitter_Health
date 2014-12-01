@@ -40,7 +40,7 @@ public class TweetRetrieval {
 		StatusesFilterEndpoint endpoint = new StatusesFilterEndpoint();
 		endpoint.stallWarnings(false);
 		try{
-			Scanner scan=new Scanner(new File("nutrition.txt"));
+			Scanner scan=new Scanner(new File("relatedterms.txt"));
 			TreeSet<String> TS=new TreeSet<String>();
 			while(scan.hasNextLine()){
 				TS.add(scan.nextLine());
