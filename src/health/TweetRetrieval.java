@@ -50,7 +50,6 @@ public class TweetRetrieval {
 				terms.add(s);
 			}
 			scan.close();
-			System.out.println(terms.size());
 			endpoint.trackTerms(terms);
 		}catch(FileNotFoundException f){
 			System.err.println(f.getMessage());
@@ -61,7 +60,7 @@ public class TweetRetrieval {
 
 		// Create a new BasicClient. By default gzip is enabled.
 		BasicClient client = new ClientBuilder()
-		.name("sampleExampleClient")
+		.name("HealthClient")
 		.hosts(Constants.STREAM_HOST)
 		.endpoint(endpoint)
 		.authentication(auth)
