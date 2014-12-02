@@ -1,41 +1,21 @@
-Ability
-Abnormal
 Active
 Aerobics
-Aggressive
-Alternate
-Announcement
-Assistance
 Athlete
 Athletics
-Attempt
-Attendance
-Attraction
-Balance
 Basketball
-Berth
 Bicep
 Biking
 Blood pressure
-Body
-Bones
 Bounce
 Boxing
 Breath
 Breathe
 Calories
 Cardiovascular
-Champion
-Championship
-Charisma
 Climb
 Coach
 Competition
 Conditioning
-Conference
-Contract
-Coordination
-Courage
 Crunches
 Curling
 Cycling
@@ -43,15 +23,10 @@ Dancing
 Diet
 Disease
 Doctor
-Drugs
 Dumbbells
 Endurance
 Energy
 Exercise
-Flex
-Force
-Framework
-Grip
 Gymnasium
 Health
 Healthy
@@ -66,161 +41,70 @@ Infection
 Injury
 Jogging
 Judo
-Jump
-Kickoff
 Kinesiology
 Kinetic
-League
 Lumbar
 Massage
 Masseur
 Medication
 Metabolic
-Motivate
-Motivation
 Muscles
 Nurse
 Nutrition
 Pedal
-Penalty
-Percentage
 Performance
 Perspiration
 Physiotherapy
-Player
 Practice
-Prevention
-Professional
 Punch bag
-Punt
 Quads
-Quick
-Quiver
-Ranking
-Rebound
-Recognition
-Record
 Recovery
-Recruit
-Regulation
 Rehabilitation
 Relax
-Representative
-Reserve
-Resilient
-Resistance
-Risk
-Role
 Rowing
 Running
-Rush
 Sanitary
-Saves
-Scare
-Scenario
-Scheme
-Score
-Scoreboard
 Scoring
-Season
-Sensible
 Shape up
-Shot
 Sit ups
-Size
 Skating
 Skiing
-Skill
-Slide
-Solo
-Speculation
-Spirit
 Sport
 Sportsmanship
-Squad
-Squat
-Stability
 Stamina
-Standing
-Statistics
 Stepper
-Strategy
-Streak
 Strength
 Stretching
 Stride
-Strong
-Superstition
-Supination
-Support
-Supremacy
-Suspension
 Swimming
 Symptoms
-Tackle
-Targets
-Team
-Teammate
-Technical
 Tennis
-Test
 Therapeutic
 Therapy
-Timeout
-Timing
 Tone
 Torso
-Tournament
 Trainer
 Training
-Transform
-Transformation
 Treadmill
-Tremors
-Trot
-Turnover
-Unbelievable
-Unrestricted
-Unusual
-Usual
 Vaccination
-Valiant
-Vault
-Vibration
-Victory
-Violation
 Vitamins
-Votes
 Walking
 Warm up
-Watchful
-Water weights
 Weigh
 Weights
-Win
-Wince
-Winning
-Wisdom
-Work
 Workout
 X-rays
 Yards
 Yoga
-Zeal
-Zest
 Diet
 Dieting
 metabolism
 matabolic
 Nutrigenomics
-Nutrition physiology
-Prenatal nutrition
-Sports nutrition
 Nutrients
 Nutrition
 Macronutrient
 Protein
-Complete protein
 Amino acids
 Alanine
 Arginine
@@ -246,48 +130,19 @@ Tyrosine
 Valine
 Theanine
 Saturated fats
-Butyric acid
-Caproic acid
-Caprylic acid
-Capric acid
-Lauric acid
-Myristic acid
-Pentadecanoic acid
-Palmitic acid
-Heptadec acid
-Stearic acid
-Arachidic acid
-Behenic acid
-Tetracos acid
 Monounsaturated fats
 Myristol
 Pentadecenoic
 Palmitol
 Heptadecenoic
-Oleic acid
 Eicosen
-Erucic acid
-Nervonic acid
 Polyunsaturated fats
-Linoleic acid
-Linolenic acid
 Stearidon
 Eicosatrienoic
 Arachidon
-Eicosapentaenoic acid
-EPA
-Docosapentaenoic acid
-DPA
-Docosahexaenoic acid
-DHA
-Omega 3 fatty acids
-Omega 6 fatty acids
 Cholesterol
 Simplesse
 Carbohydrates
-Dietary fiber
-Soluble fiber
-Insoluble fiber
 Starch
 Sugars
 Monosaccharides
@@ -298,9 +153,6 @@ Disaccharides
 Lactose
 Maltose
 Sucrose
-Alcohol
-Sugar substitutes
-Artificial sugar substitutes
 Acesulfame-K
 Acesulfame potassium
 Alitame
@@ -309,17 +161,15 @@ Cyclamate
 Dulcin
 Neohesperidine dihydrochalcone
 Neotame
-P-4000
 Saccharin
 Sucralose
-Natural sugar substitutes
 Brazzein
 Curculin
 Erythritol
 Fructose
 Glycyrrhizin
 Glycerol
-Hydrogenated starch hydrolysates
+Hydrogenated
 Isomalt
 Lactitol
 Mabinlin
@@ -336,38 +186,24 @@ Xylitol
 Micronutrients
 Vitamins
 Avitaminosis
-vitamin deficiency
 Multivitamin
-Vitamin A
+Vitamin
 retinol
-Vitamin B complex
-Vitamin B1
 thiamin
-Vitamin B2
 riboflavin
-Vitamin B3
 niacin
-Vitamin B5
 pantothenic acid
 Pyridoxine
 Pyridoxal
 Pyridoxamine
-Vitamin B7
 biotin
-Vitamin B8
 ergadenylic acid
-Vitamin B9
 folic acid
-Vitamin B12
 cyanocobalamin
 Choline
 Inositol
-Vitamin C
 ascorbic acid
-Vitamin D
-Vitamin E
 tocopherol
-Vitamin K
 Biotin
 Carotenoids
 Alpha carotene
@@ -377,24 +213,7 @@ Lutein
 Lycopene
 Zeaxanthin
 Folate
-DFE
 Minerals
-Boron
-Calcium
-Chloride
-Chromium
-Copper
-Fluoride
-Iodine
-Iron
-Magnesium
-Manganese
-Molybdenum
-Phosphorus
-Potassium
-Selenium
-Sodium
-Zinc
 Organic acids
 Acetic acid
 Citric acid
@@ -402,72 +221,34 @@ Lactic acid
 Malic acid
 Choline
 Taurine
-Diet food
-Fast food
-Organic food
-Slow food
-Adaptogen
-Adenosine triphosphate
-ATP
-Adrenal exhaustion
-Advanced glycation endproduct
 Amino acid
 Appetite
-Artificial flavors
-Artificial sweeteners
 Avitaminosis
-Biosafety
 Blood sugar
-Body fat percentage
-Body mass index
 BMI
 branched chain amino acids
-BCAA
 Calorie
-Calorie restriction
 Carbohydrate
-Simple carbohydrate
-Complex carbohydrate
 Carcinogen
 Cholesterol
-Chronic toxicity
-Codex Alimentarius
-Cognitive enhancer
-Complex carbohydrate
-Compulsive overeaters
-Daily value
-DV
-Dairy product
-Danger zone
-Deficiency disease
-Deep frying
+Dairy
 Detoxification
 Diabetes
 diabetic
 Diet
-Dietary fiber
-Dietary mineral
-Dietary supplement
+Dietary
 Dietetics
 Dieting
-Diet food
 Dietitian
 Healthy diet
 Digestion
-Digestive system
-Digestive tract
+Digestive
 Dose
 Drug
 Eating disorders
 ECA stack
-Empty calorie
-Energy drink
 Enzymes
-Ergogenic aids
-Essential amino acid
-Essential fatty acid
-Essential mineral
-Essential nutrient
+Ergogenic
 Vitamin
 EFA
 Essential fatty acids
@@ -476,51 +257,26 @@ Fad diet
 Famine
 Flavonoids
 dietary
-Food additive
-Food allergy
-Foodborne illness
-Food craving
-Food energy
-Food groups
-Food labelling regulations
-Food pyramid
-preservatives
-Food processing
-Food sensitivity
-Food Standards Agency
-Food supplements
-Functional food
-Genetically modified food
 Glucose
 monosaccharide
-Glucose meter
-Glucose tolerance
-Glycemic index
-Glycemic load
+Glycemic
 Glycogen
 Growth hormone
 Growth hormone releaser
-HDL
-high density lipoprotein cholesterol
 Health
 Healthy weight
-Herb
-High density lipoprotein cholesterol
+cholesterol
 Hypoglycemia
-Ideal weight
 Inflammation
 Insulin
 Irradiation
 Isoflavones
 Kilojoule
 Lactoferrin
-Life extension
 Lipotropic nutrients
-Local food
 Megadosing
 Megavitamin therapy
 Micronutrient
-Mineral
 Monounsaturated fat
 Multimineral
 Multinutrient
@@ -528,36 +284,18 @@ Mutagen
 Nootropic
 Nutraceutical
 Nutrient
-Nutrient density
 Nutrigenomics
-Nutrition
-Nutritional facts label
-Nutritional genomics
-Nutrition and pregnancy
-Nutrition Labeling and Education Act
-Nutrition physiology
-Nutrition taboos
 Obesity
-Optimal weight
-Organic acid
-Organic food
-Orthomolecular medicine
+Organic
 Overweight
 Pasteurization
 Phytochemicals
 Phytonutrients
-Prenatal nutrition
-Preventive medicine
+medicine
 Prohormone
 Prostaglandins
-Recommended Dietary Allowances
-RDA
-Reference Daily Intake
-RDI
-Saturated fat
-Simple carbohydrate
+carbohydrate
 Somatotropin
-Snap freezing
 Sulfate
 Sulfite
 Sweetener
@@ -569,26 +307,17 @@ Toxins
 Trans fat
 Trans-fatty acids
 Triglycerides
-Vacuum evaporation
-Bodybuilding nutrition
-Bodybuilding supplement
 Calorie restriction
-Cognitive enhancement nutrition
-Dietary supplement
+Dietary
+nutrition
+supplement
 Fruitarianism
-Life extension nutrition
-Low-carbohydrate diet
-Prenatal nutrition
-Raw food diet
-Sports nutrition
 vegetarian
 Vegetarianism
 Weight loss
-Yo-yo dieting
 Malnutrition
 Avitaminosis
-vitamin deficiency
-Nutrition transition
+vitamin
 Eating disorder
 Binge eating
 Bulimia
@@ -597,3 +326,23 @@ inflammatory
 anorexia
 anorexic
 Overeating
+flu
+influenza
+ebola
+sick
+ill
+infectious
+infect
+pandemic
+foodbourne
+waterbourne
+rheumatic
+rheumatory
+neurodegenerative
+morbid
+malignant
+invasive
+contagious
+congenital
+autoimmune
+bariatric

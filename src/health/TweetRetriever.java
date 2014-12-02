@@ -4,9 +4,13 @@ import java.util.List;
 
 public class TweetRetriever {
 	private List<String> Tweets;
-	public TweetRetriever(int numberOfTweets) {
+	public TweetRetriever(String consumerKey, String consumerSecret, String token, String secret) {
 		// TODO Auto-generated constructor stub
 	}
 	
+	public List<String> getTweets(int number){
+		
+		return Tweets;
+	}
 	
 }

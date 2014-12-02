@@ -76,7 +76,7 @@ public class TweetRetrieval {
 			//			use a time to takes the time it takes to retrieve a certain number of tweets
 			long begin=System.nanoTime();
 			HashSet<String> unique=new HashSet<String>();
-			while(unique.size()<500) {
+			while(unique.size()<5000) {
 				if (client.isDone()) {
 					System.out.println("Client connection closed unexpectedly: " + client.getExitEvent().getMessage());
 					break;
