@@ -2,9 +2,9 @@ package health;
 
 import java.util.List;
 
-public class TwitterHealthTopics {
+public class TweetRetriever {
 	private List<String> Tweets;
-	public TwitterHealthTopics(int numberOfTweets) {
+	public TweetRetriever(int numberOfTweets) {
 		// TODO Auto-generated constructor stub
 	}
 	
