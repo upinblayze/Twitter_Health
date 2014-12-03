@@ -226,12 +226,11 @@ Appetite
 Avitaminosis
 Blood sugar
 BMI
-branched chain amino acids
 Calorie
 Carbohydrate
 Carcinogen
+Carcinogenic
 Cholesterol
-Dairy
 Detoxification
 Diabetes
 diabetic
@@ -240,20 +239,15 @@ Dietary
 Dietetics
 Dieting
 Dietitian
-Healthy diet
 Digestion
 Digestive
-Dose
 Drug
 Eating disorders
 ECA stack
 Enzymes
 Ergogenic
 Vitamin
-EFA
 Essential fatty acids
-Fat soluble vitamins
-Fad diet
 Famine
 Flavonoids
 dietary
@@ -327,7 +321,6 @@ anorexia
 anorexic
 Overeating
 flu
-influenza
 ebola
 sick
 ill
@@ -346,3 +339,73 @@ contagious
 congenital
 autoimmune
 bariatric
+Rabies
+strain
+injury
+Rheumatism
+Rheumatoid
+arthritis
+Rickets
+syndrome
+fever
+Rubella
+Salmonellosis
+Scabies
+Scarlet fever
+Sciatica
+Scleroderma
+Scrapie
+Scurvy
+Sepsis
+Septicemia
+SARS
+Shigellosis
+Shingles
+anemia
+Siderosis
+SIDS
+Silicosis
+Smallpox
+syndrome
+ulcers
+Strabismus
+Strep
+Streptococcal
+infection
+Synovitis
+Syphilis
+influenza
+Schizophrenia
+Taeniasis
+Tay-Sachs disease
+Teratoma
+Tetanus
+Thalassaemia
+Thrush
+Thymoma
+Tinnitus
+Tonsillitis
+Trichinosis
+Trichomoniasis
+Trisomy
+Tuberculosis
+Tularemia
+Tungiasis
+Typhoid
+Typhus
+Tumor
+Ulcerative colitis
+Ulcers
+Uremia
+Urticaria
+Uveitis
+Varicella
+Varicose veins
+Vasovagal syncope
+Vitiligo
+Von Hippel-Lindau disease
+Viral
+meningitis
+Warkany
+Warts
+Yersiniosis

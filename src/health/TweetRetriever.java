@@ -63,8 +63,9 @@ public class TweetRetriever {
 		client.connect();
 
 		HashSet<String> unique=new HashSet<String>();
-		try{
-			while(unique.size()<number) {
+		while(unique.size()<number) {
+			try{
+			
 				if (client.isDone()) {
 					System.out.println("Client connection closed unexpectedly: " + client.getExitEvent().getMessage());
 					break;
@@ -103,13 +104,15 @@ public class TweetRetriever {
 					System.out.println("Did not receive a message in 1 seconds");
 				}
 				
+				System.out.println("get " + unique.size() + " Tweets");
+			} catch (InterruptedException e) {
+				System.err.println(e.getMessage());
+			} catch (JSONException e) {
+				System.err.println(e.getMessage());
+				continue;
 			}
-		} catch (InterruptedException e) {
-			System.err.println(e.getMessage());
-		} catch (JSONException e) {
-			System.err.println(e.getMessage());
 		}
-		System.out.println(unique.size());
+		
 		Tweets.addAll(unique);
 		client.stop();
 		
