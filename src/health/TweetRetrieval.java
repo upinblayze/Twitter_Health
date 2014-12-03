@@ -50,7 +50,6 @@ public class TweetRetrieval {
 				terms.add(s);
 			}
 			scan.close();
-			System.out.println(terms.size());
 			endpoint.trackTerms(terms);
 		}catch(FileNotFoundException f){
 			System.err.println(f.getMessage());
@@ -61,7 +60,7 @@ public class TweetRetrieval {
 
 		// Create a new BasicClient. By default gzip is enabled.
 		BasicClient client = new ClientBuilder()
-		.name("sampleExampleClient")
+		.name("HealthClient")
 		.hosts(Constants.STREAM_HOST)
 		.endpoint(endpoint)
 		.authentication(auth)
@@ -76,7 +75,7 @@ public class TweetRetrieval {
 			//			use a time to takes the time it takes to retrieve a certain number of tweets
 			long begin=System.nanoTime();
 			HashSet<String> unique=new HashSet<String>();
-			while(unique.size()<500) {
+			while(unique.size()<5000) {
 				if (client.isDone()) {
 					System.out.println("Client connection closed unexpectedly: " + client.getExitEvent().getMessage());
 					break;
